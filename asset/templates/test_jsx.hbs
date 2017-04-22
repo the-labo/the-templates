@@ -1,10 +1,10 @@
 /**
- * Test case for {{spinalcase name}}.
+ * Test for {{name}}.
  * Runs with mocha.
  */
 'use strict'
 
-import {{pascalcase name}} from '../lib/{{snakecase name}}'
+import {{pascalcase name}} from '{{{relative}}}'
 import React from 'react'
 import { ok, equal } from 'assert'
 import { shallow } from 'enzyme'
@@ -18,7 +18,7 @@ describe('{{spinalcase name}}', () => {
 
   it('Render a component', () => {
     let element = shallow(
-       <{{pascalcase name}}/>
+       <{{pascalcase name}} />
     )
     ok(element)
   })
