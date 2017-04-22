@@ -1,0 +1,27 @@
+/**
+ * Test case for {{spinalcase name}}.
+ * Runs with mocha.
+ */
+'use strict'
+
+import {{pascalcase name}} from '../lib/{{snakecase name}}'
+import React from 'react'
+import { ok, equal } from 'assert'
+import { shallow } from 'enzyme'
+
+describe('{{spinalcase name}}', () => {
+  before(() => {
+  })
+
+  after(() => {
+  })
+
+  it('Render a component', () => {
+    let element = shallow(
+       <{{pascalcase name}}/>
+    )
+    ok(element)
+  })
+})
+
+/* global describe, before, after, it */
