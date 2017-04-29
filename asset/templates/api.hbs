@@ -1,0 +1,110 @@
+# {{pkg.name}}@{{pkg.version}}
+
+{{pkg.description}}
+
++ Functions
+{{#each signature.functions}}
+  + [{{name}}({{paramDesc}})](#{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}})
+{{/each}}
+{{#each signature.classes}}
++ [`{{name}}`](#{{{spinalcase ../pkg.name}}}-classes) Class
+{{#with constructor}}
+  + [new {{../name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor)
+{{/with}}
+{{#each functions}}
+  + [{{../instanceName}}.{{name}}({{paramDesc}})](#{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}})
+{{/each}}
+{{/each}}
+
+## Functions
+
+{{#each signature.functions}}
+<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-function-{{spinalcase name}}" ></a>
+
+### {{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
+
+{{{description}}}
+{{#if parameters}}
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+{{/each}}
+
+{{#each signature.classes}}
+
+<a class='md-heading-link' name="{{{spinalcase ../pkg.name}}}-classes"></a>
+
+## `{{name}}` Class
+
+{{description}}{{constructor.description}}
+
+{{#if extends.[0]}}
+**Extends**: {{#each extends}}
+
++ `{{{this}}}`
+{{/each}}{{/if}}
+
+{{#with constructor}}
+
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-constructor" ></a>
+
+### new {{../name}}({{paramDesc}})
+
+Constructor of {{../name}} class
+
+{{#if parameters}}
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+
+{{/with}}
+{{#each functions}}
+
+<a class='md-heading-link' name="{{{spinalcase ../../pkg.name}}}-classes-{{spinalcase ../name}}-{{name}}" ></a>
+
+### {{../instanceName}}.{{name}}({{paramDesc}}){{#if returns.type}} -> `{{{returns.type}}}`{{/if}}
+
+{{{description}}}
+{{#if parameters}}
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+{{#each parameters}}
+| {{name}} | {{type}} | {{{description}}} |
+{{/each}}
+
+{{/if}}
+{{#if examples}}
+```javascript
+{{#each examples}}
+{{{this}}}
+{{/each}}
+```
+{{/if}}
+{{/each}}
+{{/each}}
+
+
+
