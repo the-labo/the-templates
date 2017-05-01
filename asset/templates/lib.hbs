@@ -1,0 +1,20 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+'use strict'
+
+{{#each modules}}
+import {{this}} from './{{this}}'
+{{/each}}
+
+export default {{index}}
+
+export {
+{{#each modules}}
+  {{this}}{{#if @last}}{{else}},
+{{/if}}
+{{/each}}
+
+}
