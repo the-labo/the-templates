@@ -1,0 +1,17 @@
+/**
+ * {{description}}
+ * @module {{name}}
+ */
+'use strict'
+
+{{#each modules}}
+import {{this}} from './{{this}}'
+{{/each}}
+
+export {
+{{#each modules}}
+  {{this}}{{#if @last}}{{else}},
+{{/if}}
+{{/each}}
+
+}

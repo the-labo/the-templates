@@ -1,0 +1,17 @@
+/**
+ * {{description}}
+ * @module {{name}}
+ */
+'use strict'
+
+{{#each modules}}
+const {{this}} = require('./{{this}}')
+{{/each}}
+
+module.exports = {
+{{#each modules}}
+  {{this}}{{#if @last}}{{else}},
+{{/if}}
+{{/each}}
+
+}
