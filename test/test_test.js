@@ -29,6 +29,17 @@ describe('test', function () {
       bud
     )
   }))
+
+  it('TestDir', () => co(function * () {
+    let bud = test.dir({
+      src: `${__dirname}/../misc/mocks`,
+      dest: `${__dirname}/../tmp/foo/test/`,
+      node: true
+    })
+    yield coz.render(
+      bud
+    )
+  }))
 })
 
 /* global describe, before, after, it */
