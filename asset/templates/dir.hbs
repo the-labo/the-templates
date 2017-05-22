@@ -5,12 +5,12 @@
 'use strict'
 
 {{#each modules}}
-import {{this}} from './{{this}}'
+import {{name}} from './{{path}}'
 {{/each}}
 
 export {
 {{#each modules}}
-  {{this}}{{#if @last}}{{else}},
+  {{name}}{{#if @last}}{{else}},
 {{/if}}
 {{/each}}
 
