@@ -1,0 +1,20 @@
+/**
+ * Template contents
+ * @namespace Templates
+{{#each files}}
+ * @property {string} {{{name}}} - Template from {{filename}}
+{{/each}}
+ */
+'use strict'
+
+import { compile } from 'Handlebars'
+
+/** @lends Templates */
+const Templates = {}
+
+{{#each files}}
+// From {{filename}}
+Templates['{{{name}}}'] = compile(`{{{content}}}`)
+
+{{/each}}
+export default Templates
