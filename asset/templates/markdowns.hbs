@@ -1,14 +1,18 @@
 /**
  * Markdown contents
- * @module Markdowns
+ * @namespace Markdowns
+{{#each files}}
+ * @property {string} {{{name}}} - Template from {{filename}}
+{{/each}}
  */
 'use strict'
 
+/** @lends Markdowns */
 const Markdowns = {}
 
 {{#each files}}
 // From {{filename}}
-Markdowns['{{{name}}}'] = `{{content}}`
+Markdowns['{{{name}}}'] = `{{{content}}}`
 
 {{/each}}
 export default Markdowns
