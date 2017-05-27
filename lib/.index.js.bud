@@ -4,13 +4,14 @@
 
 'use strict'
 
-const { indexJsBud } = require('ape-tmpl')
+const dir = require('./dir')
 const { description, name } = require('../package.json')
 
-module.exports = indexJsBud({
-  desc: description,
-  module: name,
-  dirname: __dirname
+module.exports = dir({
+  name,
+  description: description,
+  dirname: __dirname,
+  node: true
 })
 
 if (!module.parent) {
