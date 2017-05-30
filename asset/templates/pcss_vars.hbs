@@ -1,0 +1,11 @@
+/**
+ * Style variables
+ *
+{{#if src}} * This file is generated from "{{{src}}}".{{/if}}
+ */
+
+:root {
+{{#each values}}
+  --{{spinalcase @key}}: {{this}};
+{{/each}}
+}
