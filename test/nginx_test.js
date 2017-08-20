@@ -7,26 +7,25 @@
 const nginx = require('../lib/nginx.js')
 const assert = require('assert')
 const coz = require('coz')
-const co = require('co')
 
 describe('nginx', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Nginx', () => co(function * () {
+  it('Nginx', async () => {
     let bud = nginx({})
 
     bud.mkdirp = true
     bud.path = `${__dirname}/../tmp/foo/nginx.vhost`
-    yield coz.render(bud)
-  }))
+    await coz.render(bud)
+  })
 })
 
 /* global describe, before, after, it */

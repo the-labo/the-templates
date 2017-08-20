@@ -7,20 +7,20 @@
 const readme = require('../lib/readme.js')
 const assert = require('assert')
 const coz = require('coz')
-const co = require('co')
+
 
 describe('readme', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Readme', () => co(function * () {
+  it('Readme', async () => {
     let bud = readme({
       pkg: {
         name: 'foo'
@@ -30,10 +30,10 @@ describe('readme', function () {
     })
     bud.mkdirp = true
     bud.path = `${__dirname}/../tmp/foo/README.md`
-    yield coz.render(
+    await coz.render(
       bud
     )
-  }))
+  })
 })
 
 /* global describe, before, after, it */

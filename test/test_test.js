@@ -7,39 +7,39 @@
 const test = require('../lib/test.js')
 const assert = require('assert')
 const coz = require('coz')
-const co = require('co')
+
 
 describe('test', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Test', () => co(function * () {
+  it('Test', async () => {
     let bud = test({
       src: `${__dirname}/../misc/mocks/*.jsx`,
       dest: `${__dirname}/../tmp/foo/test`
     })
-    yield coz.render(
+    await coz.render(
       bud
     )
-  }))
+  })
 
-  it('TestDir', () => co(function * () {
+  it('TestDir', async () => {
     let bud = test.dir({
       src: `${__dirname}/../misc/mocks`,
       dest: `${__dirname}/../tmp/foo/test/`,
       node: true
     })
-    yield coz.render(
+    await coz.render(
       bud
     )
-  }))
+  })
 })
 
 /* global describe, before, after, it */
