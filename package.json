@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "2.0.2",
+  "version": "2.1.1",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -35,8 +35,8 @@
     "ape-updating": "^4.1.1",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "the-script-test": "^2.0.1"
   },
   "engines": {

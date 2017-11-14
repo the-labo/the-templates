@@ -5,13 +5,13 @@
 'use strict'
 
 const dir = require('./dir')
-const { description, name } = require('../package.json')
+const {description, name} = require('../package.json')
 
 module.exports = dir({
   name,
   description: description,
   dirname: __dirname,
-  node: true
+  cjs: true
 })
 
 if (!module.parent) {
