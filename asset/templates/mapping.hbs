@@ -1,0 +1,17 @@
+/**
+ * {{sentencecase name}}
+ * @namespace {{name}}
+ */
+'use strict'
+
+import {{requireAs}} from '{{requirePath}}'
+
+{{#each mapping}}
+export const '{{instanceName}}' = {{../requireAs}}.{{className}},
+{{/each}}
+
+export default = Object.freeze({
+{{#each mapping}}
+    '{{instanceName}}',
+{{/each}}
+})
