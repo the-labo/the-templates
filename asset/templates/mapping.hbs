@@ -7,11 +7,11 @@
 import {{requireAs}} from '{{requirePath}}'
 
 {{#each mapping}}
-export const '{{instanceName}}' = {{../requireAs}}.{{className}},
+export const {{instanceName}} = {{../requireAs}}.{{className}}
 {{/each}}
 
 export default = Object.freeze({
 {{#each mapping}}
-    '{{instanceName}}',
+  {{instanceName}},
 {{/each}}
 })
