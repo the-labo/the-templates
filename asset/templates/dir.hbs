@@ -15,3 +15,11 @@ export {
 {{/each}}
 
 }
+
+export default {
+{{#each modules}}
+    {{name}}{{#if @last}}{{else}},
+    {{/if}}
+{{/each}}
+
+}
