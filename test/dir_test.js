@@ -30,6 +30,19 @@ describe('dir', function () {
     bud.mkdirp = true
     await coz.render(bud)
   })
+
+  it('CJS', async () => {
+    const bud = dir({
+      dirname: __dirname,
+      name: 'foo',
+      description: 'hoge',
+      default: 'dddd',
+      cjs: true
+    })
+    bud.path = `${__dirname}/../tmp/foo/bar/baz.js`
+    bud.mkdirp = true
+    await coz.render(bud)
+  })
 })
 
 /* global describe, before, after, it */
