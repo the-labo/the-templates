@@ -23,7 +23,8 @@ describe('dir', function () {
     const bud = dir({
       dirname: __dirname,
       name: 'foo',
-      description: 'hoge'
+      description: 'hoge',
+      default: 'dddd'
     })
     bud.path = `${__dirname}/../tmp/foo/bar/baz.mjs`
     bud.mkdirp = true
