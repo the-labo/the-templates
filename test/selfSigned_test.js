@@ -8,7 +8,6 @@ const selfSigned = require('../lib/selfSigned.js')
 const assert = require('assert')
 const coz = require('coz')
 
-
 describe('self-signed', function () {
   this.timeout(3000)
 

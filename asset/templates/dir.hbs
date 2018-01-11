@@ -10,16 +10,10 @@ import {{name}} from './{{path}}'
 
 export {
 {{#each modules}}
-  {{name}}{{#if @last}}{{else}},
+  {{name}},
+{{/each}}
+}
+
+{{#if default}}
+export default {{default}}
 {{/if}}
-{{/each}}
-
-}
-
-export default {
-{{#each modules}}
-    {{name}}{{#if @last}}{{else}},
-    {{/if}}
-{{/each}}
-
-}

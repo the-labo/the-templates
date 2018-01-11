@@ -7,12 +7,14 @@
 const dir = require('./dir')
 const {description, name} = require('../package.json')
 
-module.exports = dir({
+module.exports = [
+  true, false
+].map((cjs) => dir({
+  cjs,
   name,
   description: description,
   dirname: __dirname,
-  cjs: true
-})
+}))
 
 if (!module.parent) {
   require('coz').render(__filename)

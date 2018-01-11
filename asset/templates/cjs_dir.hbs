@@ -10,12 +10,6 @@ const {{name}} = require('./{{path}}')
 
 module.exports = {
 {{#each modules}}
-  {{name}}{{#if @last}}{{else}},
-{{/if}}
+  {{name}},
 {{/each}}
-
 }
-
-{{#each modules}}
-exports.{{name}} = {{name}}
-{{/each}}
