@@ -4,8 +4,10 @@
  */
 'use strict'
 
+const _d = (m) => 'default' in m ? m['default'] : m
+
 {{#each modules}}
-const {{name}} = require('./{{path}}')
+const {{name}} = _d(require('./{{path}}'))
 {{/each}}
 
 module.exports = {
