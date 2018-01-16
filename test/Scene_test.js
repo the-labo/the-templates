@@ -6,6 +6,7 @@
 
 const scene = require('../lib/Scene.js')
 const assert = require('assert')
+const coz = require('coz')
 
 describe('scene', function () {
   this.timeout(3000)
@@ -19,7 +20,10 @@ describe('scene', function () {
   })
 
   it('Scene', async () => {
-
+    const bud = scene({name: 'hoge', cjs: true})
+    bud.path = `${__dirname}/../tmp/HogeScene.js`
+    bud.mkdirp = true
+    coz.render(bud)
   })
 })
 
