@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "aglob": "^3.0.0",
     "ape-tmpl": "^6.0.8",
+    "markdown-toc": "^1.2.0",
     "selfsigned": "^1.9.1",
     "stringcase": "^4.1.0"
   },
