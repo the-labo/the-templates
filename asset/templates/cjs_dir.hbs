@@ -6,15 +6,11 @@
 
 const _d = (m) => 'default' in m ? m.default : m
 
-{{#each modules}}
-const {{name}} = _d(require('./{{path}}'))
-{{/each}}
-
 module.exports = {
 {{#each modules}}
-  {{name}},
+  get {{name}} () { return _d(require('./{{path}}')) },
 {{/each}}
-{{#if defaultExport}}
-  default: {{defaultExport}},
+{{#if defaultModule}}
+  get default () { return _d(require('./{{defaultModule.path}}') },
 {{/if}}
 }

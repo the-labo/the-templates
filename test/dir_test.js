@@ -36,7 +36,7 @@ describe('dir', function () {
       dirname: __dirname,
       name: 'foo',
       description: 'hoge',
-      default: 'dddd',
+      default: 'dir_test',
       cjs: true
     })
     bud.path = `${__dirname}/../tmp/foo/bar/baz.js`
