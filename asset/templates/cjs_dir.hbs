@@ -11,6 +11,6 @@ module.exports = {
   get {{name}} () { return _d(require('./{{path}}')) },
 {{/each}}
 {{#if defaultModule}}
-  get default () { return _d(require('./{{defaultModule.path}}') },
+  get default () { return _d(require('./{{defaultModule.path}}')) },
 {{/if}}
 }
