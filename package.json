@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -28,11 +28,11 @@
     "aglob": "^3.0.0",
     "ape-tmpl": "^6.0.8",
     "markdown-toc": "^1.2.0",
-    "selfsigned": "^1.9.1",
+    "selfsigned": "^1.10.2",
     "stringcase": "^4.1.0"
   },
   "devDependencies": {
-    "amocha": "^4.0.0",
+    "amocha": "^5.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
