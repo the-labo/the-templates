@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "2.5.6",
+  "version": "2.5.7",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -29,7 +29,7 @@
     "ape-tmpl": "^6.0.8",
     "markdown-toc": "^1.2.0",
     "selfsigned": "^1.10.2",
-    "stringcase": "^4.1.0"
+    "stringcase": "^4.1.1"
   },
   "devDependencies": {
     "amocha": "^5.0.0",
@@ -41,7 +41,7 @@
     "injectmock": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "the-script-test": "^2.0.1"
+    "the-script-test": "^2.1.0"
   },
   "engines": {
     "node": ">=7.6",

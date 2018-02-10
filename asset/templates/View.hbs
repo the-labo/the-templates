@@ -1,0 +1,36 @@
+/**
+ * {{pascalcase name}} component
+ */
+'use strict'
+
+import React from 'react'
+import { TheView } from 'the-components'
+import { cycled, localized, stateful, titled } from 'the-component-mixins'
+import styles from './{{pascalcase name}}.pcss'
+
+@cycled
+@localized
+@titled(({l}) => null)
+class {{pascalcase name}} extends React.Component {
+  render () {
+    const {l, title} = this.props
+    return (
+      <TheView className={styles.self}>
+        <TheView.Header icon={null}
+                        text={title}
+        />
+        <TheView.Body>
+          This is {{pascalcase name}}!
+        </TheView.Body>
+      </TheView>
+    )
+  }
+}
+
+export default stateful(
+  (state) => ({
+
+  }),
+  ({}) => ({
+  }),
+)({{pascalcase name}})
