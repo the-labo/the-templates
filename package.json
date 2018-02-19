@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/the-labo/the-templates#readme",
   "dependencies": {
     "aglob": "^3.0.0",
-    "ape-tmpl": "^6.0.8",
+    "ape-tmpl": "^6.0.10",
     "markdown-toc": "^1.2.0",
     "selfsigned": "^1.10.2",
     "stringcase": "^4.1.1"
