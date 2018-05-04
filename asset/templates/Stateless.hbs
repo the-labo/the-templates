@@ -6,6 +6,7 @@
 import React from 'react'
 import { localized, stateless } from 'the-component-mixins'
 
+@stateless()
 @localized
 class {{pascalcase name}} extends React.Component {
   render () {
@@ -16,4 +17,4 @@ class {{pascalcase name}} extends React.Component {
 }
 
 
-export default stateless()({{pascalcase name}})
+export default {{pascalcase name}}
