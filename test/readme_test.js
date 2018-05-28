@@ -8,7 +8,6 @@ const readme = require('../lib/readme.js')
 const assert = require('assert')
 const coz = require('coz')
 
-
 describe('readme', function () {
   this.timeout(3000)
 
@@ -21,7 +20,7 @@ describe('readme', function () {
   })
 
   it('Readme', async () => {
-    let bud = readme({
+    const bud = readme({
       pkg: {
         name: 'foo'
       },
