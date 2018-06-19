@@ -27,7 +27,7 @@ module.exports = _d(require('./{{defaultModule.path}}')))
 {{else}}
 module.exports = {
 {{#each modules}}
-  {{name}}: {{camelcase name}}
+  {{name}}: {{camelcase name}},
 {{/each}}
 }
 {{/if}}
