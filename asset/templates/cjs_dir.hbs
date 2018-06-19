@@ -8,21 +8,26 @@
 const _interopRequireDefault = (obj) => obj && obj.__esModule ? obj : {default: obj}
 const _d = (m) => _interopRequireDefault(m).default
 
+{{#each modules}}
+const {{camelcase name}} = _d(require('./{{path}}'))
+{{/each}}
+
 // --------------
 // Named exports for lebab ( https://github.com/lebab/lebab )
 // --------------
 {{#each modules}}
-exports.{{name}} = _d(require('./{{path}}'))
+exports.{{name}} = {{camelcase name}}
 {{/each}}
 
 // --------------
 // Default exports
 // --------------
+{{#if defaultModule}}
+module.exports = _d(require('./{{defaultModule.path}}')))
+{{else}}
 module.exports = {
 {{#each modules}}
-  get {{name}} () { return _d(require('./{{path}}')) },
+  {{name}}: {{camelcase name}}
 {{/each}}
-{{#if defaultModule}}
-  get default () { return _d(require('./{{defaultModule.path}}')) },
-{{/if}}
 }
+{{/if}}
