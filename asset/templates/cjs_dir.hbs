@@ -5,8 +5,15 @@
  */
 'use strict'
 
-const _d = (m) => 'default' in m ? m.default : m
+const _interopRequireDefault(obj) => obj && obj.__esModule ? obj : {default: obj}
+const _d = (m) => _interopRequireDefault(m).default
 
+// Named exports for lebab ( https://github.com/lebab/lebab )
+{{#each modules}}
+exports.{{name}} = _d(require('./{{path}}'))
+{{/each}}
+
+// Default exports
 module.exports = {
 {{#each modules}}
   get {{name}} () { return _d(require('./{{path}}')) },
