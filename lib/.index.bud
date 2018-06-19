@@ -8,7 +8,7 @@ const dir = require('./dir')
 const {description, name} = require('../package.json')
 
 module.exports = [
-  true, false
+  true
 ].map((cjs) => dir({
   cjs,
   name,
