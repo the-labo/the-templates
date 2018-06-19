@@ -9,10 +9,13 @@ const _interopRequireDefault = (obj) => obj && obj.__esModule ? obj : {default: 
 const _d = (m) => _interopRequireDefault(m).default
 
 {{#each modules}}
-const {{camelcase name}}_ = _d(require('./{{path}}'))
+const {{varName}} = _d(require('./{{path}}'))
 {{/each}}
 
 {{#each modules}}
-exports.{{name}} = {{camelcase name}}_
+exports.{{name}} = {{varName}}
 {{/each}}
 
+{{#if defaultExport}}
+module.exports = {{defaultExport}}
+{{/if}}

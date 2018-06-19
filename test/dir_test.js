@@ -26,7 +26,7 @@ describe('dir', function () {
       description: 'hoge',
       default: 'dddd'
     })
-    bud.path = `${__dirname}/../tmp/foo/bar/baz.mjs`
+    bud.path = `${__dirname}/../tmp/testing-dir/index.mjs`
     bud.mkdirp = true
     await coz.render(bud)
   })
@@ -39,7 +39,7 @@ describe('dir', function () {
       default: 'dir_test',
       cjs: true
     })
-    bud.path = `${__dirname}/../tmp/foo/bar/baz.js`
+    bud.path = `${__dirname}/../tmp/testing-dir/index.js`
     bud.mkdirp = true
     await coz.render(bud)
   })

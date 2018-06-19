@@ -11,7 +11,7 @@ import {{name}} from './{{path}}'
 
 export {
 {{#each modules}}
-  {{name}},
+{{#if varNameChanged}} {{varName}} as{{/if}} {{name}},
 {{/each}}
 }
 
