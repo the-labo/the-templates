@@ -12,22 +12,7 @@ const _d = (m) => _interopRequireDefault(m).default
 const {{camelcase name}} = _d(require('./{{path}}'))
 {{/each}}
 
-// --------------
-// Named exports for lebab ( https://github.com/lebab/lebab )
-// --------------
 {{#each modules}}
 exports.{{name}} = {{camelcase name}}
 {{/each}}
 
-// --------------
-// Default exports
-// --------------
-{{#if defaultModule}}
-module.exports = _d(require('./{{defaultModule.path}}')))
-{{else}}
-module.exports = {
-{{#each modules}}
-  {{name}}: {{camelcase name}},
-{{/each}}
-}
-{{/if}}
