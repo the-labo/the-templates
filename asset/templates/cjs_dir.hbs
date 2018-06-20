@@ -18,7 +18,7 @@ const {{defaultModule.varName}} = _d(require('./{{defaultModule.path}}'))
 {{#each modules}}
 exports.{{name}} = {{varName}}
 {{/each}}
-
 {{#if defaultModule}}
+
 module.exports = {{defaultModule.varName}}
 {{/if}}
