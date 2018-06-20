@@ -12,8 +12,9 @@ const _d = (m) => _interopRequireDefault(m).default
 const {{varName}} = _d(require('./{{path}}'))
 {{/each}}
 
-
 {{#each modules}}
+{{#if defaultModule}}// `module.exports` overrides these `exports.*`, but still needs them for lebab (https://github.com/lebab/lebab)
+{{/if}}
 exports.{{name}} = {{varName}}
 {{/each}}
 
