@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "4.0.9",
+  "version": "4.0.10",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
