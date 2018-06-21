@@ -14,11 +14,18 @@ const {{varName}} = require('./{{path}}')
 const {{defaultModule.varName}} = require('./{{defaultModule.path}}')
 {{/if}}
 
-{{#if defaultModule}}{{#if modules}}// `module.exports` overrides these `exports.*`, but still needs them for lebab (https://github.com/lebab/lebab){{/if}}{{/if}}
+{{#if modules}}// `module.exports` overrides these `exports.*`, but still needs them for lebab (https://github.com/lebab/lebab){{/if}}
 {{#each modules}}
 exports.{{name}} = _d({{varName}})
 {{/each}}
 {{#if defaultModule}}
 
 module.exports = _d({{defaultModule.varName}})
+{{else}}
+
+module.exports = {
+{{#each modules}}
+  {{name}}: _d({{varName}}),
+{{/each}}
+}
 {{/if}}
