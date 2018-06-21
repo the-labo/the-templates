@@ -8,17 +8,17 @@
 const _d = (m) => (m && 'default' in m) ? m.default : m
 
 {{#each modules}}
-const {{varName}} = _d(require('./{{path}}'))
+const {{varName}} = require('./{{path}}')
 {{/each}}
 {{#if defaultModule}}
-const {{defaultModule.varName}} = _d(require('./{{defaultModule.path}}'))
+const {{defaultModule.varName}} = require('./{{defaultModule.path}}')
 {{/if}}
 
 {{#if defaultModule}}{{#if modules}}// `module.exports` overrides these `exports.*`, but still needs them for lebab (https://github.com/lebab/lebab){{/if}}{{/if}}
 {{#each modules}}
-exports.{{name}} = {{varName}}
+exports.{{name}} = _d({{varName}})
 {{/each}}
 {{#if defaultModule}}
 
-module.exports = {{defaultModule.varName}}
+module.exports = _d({{defaultModule.varName}})
 {{/if}}
