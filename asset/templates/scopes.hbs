@@ -8,8 +8,11 @@
 const _d = (m) => (m && 'default' in m) ? m.default : m
 
 {{#each modules}}{{#if namespace}}{{else}}
-const {{varName}} = _d(require('{{path}}')){{/if}}{{/each}}
+const {{varName}} = require('{{path}}'){{/if}}{{/each}}
 
 {{#each modules}}
-exports.{{name}} = {{#if namespace}}{}{{else}}{{varName}}{{/if}}
+{{#if namespace}}
+
+// `./{{path}}` directory
+exports.{{name}} = {}{{else}}exports.{{name}} = _d({{varName}}){{/if}}
 {{/each}}
