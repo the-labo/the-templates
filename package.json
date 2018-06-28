@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "4.0.18",
+  "version": "4.0.20",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "aglob": "^3.0.1",
     "markdown-toc": "^1.2.0",
+    "objnest": "^4.1.4",
     "reserved": "^0.1.2",
     "selfsigned": "^1.10.3",
     "stringcase": "^4.2.0"
