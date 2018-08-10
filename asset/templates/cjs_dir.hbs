@@ -21,6 +21,7 @@ exports.{{name}} = _d({{varName}})
 {{#if defaultModule}}
 
 module.exports = _d({{defaultModule.varName}})
+module.exports.default = _d({{defaultModule.varName}})
 {{else}}
 
 module.exports = {
