@@ -23,11 +23,9 @@ exports.{{name}} = _d({{varName}})
 module.exports = _d({{defaultModule.varName}})
 {{else}}
 
-const default_ = Object.freeze({
+module.exports = Object.freeze({
 {{#each modules}}
   {{name}}: _d({{varName}}),
 {{/each}}
 })
 {{/if}}
-
-module.exports = default_
