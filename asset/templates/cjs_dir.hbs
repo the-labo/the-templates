@@ -5,8 +5,6 @@
  */
 'use strict'
 
-const _d = (m) => (m && 'default' in m) ? m.default : m
-
 {{#each modules}}
 const {{varName}} = require('./{{path}}')
 {{/each}}
@@ -16,16 +14,16 @@ const {{defaultModule.varName}} = require('./{{defaultModule.path}}')
 
 {{#if modules}}// `module.exports` overrides these `exports.*`, but still needs them for lebab (https://github.com/lebab/lebab){{/if}}
 {{#each modules}}
-exports.{{name}} = _d({{varName}})
+exports.{{name}} = {{varName}}
 {{/each}}
 {{#if defaultModule}}
 
-module.exports = _d({{defaultModule.varName}})
+module.exports = {{defaultModule.varName}}
 {{else}}
 
-module.exports = Object.freeze({
+module.exports = {
 {{#each modules}}
-  {{name}}: _d({{varName}}),
+  {{name}}: {{varName}},
 {{/each}}
-})
+}
 {{/if}}
