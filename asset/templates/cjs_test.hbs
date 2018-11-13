@@ -5,7 +5,7 @@
 'use strict'
 
 const {{varName}} = require('{{{relative}}}')
-const { ok, equal } = require('assert')
+const { ok, strictEqual: equal, deepStrictEqual: deepEqual } = require('assert')
 
 describe('{{spinalcase name}}', () => {
   before(() => {

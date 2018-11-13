@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -30,20 +30,20 @@
     "markdown-toc": "^1.2.0",
     "objnest": "^5.0.3",
     "reserved": "^0.1.2",
-    "selfsigned": "^1.10.3",
-    "stringcase": "^4.2.0"
+    "selfsigned": "^1.10.4",
+    "stringcase": "^4.3.0"
   },
   "devDependencies": {
     "amocha": "^5.0.0",
     "ape-formatting": "^1.0.2",
-    "ape-releasing": "^4.0.4",
+    "ape-releasing": "^5.0.0",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^6.0.11",
     "ape-updating": "^5.0.1",
     "coz": "^7.0.2",
     "injectmock": "^2.0.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "the-script-test": "^2.1.6"
   },
   "engines": {

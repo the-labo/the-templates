@@ -51,7 +51,7 @@ program.parse(process.argv)
 
 // Run main command
 {{camelcase signature.name}}.apply({{camelcase signature.name}}, program.args.concat({
-{{#each signature.options}}  {{name}}: program.{{name}}{{#if @last}}{{else}},
+{{#each signature.options}}  {{camelcase name}}: program['{{name}}']{{#if @last}}{{else}},
 {{/if}}
 {{/each}}
 })
