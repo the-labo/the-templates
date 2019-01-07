@@ -4,15 +4,19 @@
 'use strict'
 
 import React from 'react'
-import { localized, stateless } from 'the-component-mixins'
+import context from '../context'
 
-@stateless()
-@localized
 class {{pascalcase name}} extends React.Component {
+  #stateless = context.stateful()
+
   render () {
-   return (
-     <div></div>
-   )
+    return this.#stateless(
+      ({ l, }) => {
+        return (
+          <div></div>
+        )
+      }
+    )
   }
 }
 

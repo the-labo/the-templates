@@ -4,21 +4,26 @@
 'use strict'
 
 import React from 'react'
-import { localized, stateful } from 'the-component-mixins'
+import context from '../../context'
 
-@stateful(
-  (state) => ({
-  }),
-  ({}) => ({
-  }),
-)
-@localized
 class {{pascalcase name}} extends React.Component {
+  #stateful = context.stateful(
+    (state) => ({
+    }),
+    ({}) => ({
+    }),
+  )
   render () {
-    const {l} = this.props
-    return (
-      <div>
-      </div>
+    return this.#stateful(
+     ({
+        l,
+     }) => {
+       return (
+         <div>
+
+         </div>
+       )
+     }
     )
   }
 }
