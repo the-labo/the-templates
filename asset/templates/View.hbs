@@ -1,18 +1,22 @@
 /**
  * {{pascalcase name}} component
+ * @class {{pascalcase name}}
  */
 'use strict'
 
 import React from 'react'
-import { TheMeta, TheView } from 'the-components'
+import { TheMeta, TheView, TheCycle } from 'the-components'
 import styles from './{{pascalcase name}}.pcss'
-import context from '../context'
+import context from '../../context'
 
+/** @lends class {{pascalcase name}} */
 class {{pascalcase name}} extends React.PureComponent {
   #stateful = context.stateful(
     (state) => ({
     }),
     ({}) => ({
+      onMount: () => {},
+      onUnmount: () => {},
     })
   )
 
@@ -23,16 +27,18 @@ class {{pascalcase name}} extends React.PureComponent {
       }) => {
         const title = null
         return (
-          <TheMeta title={title}>
-            <TheView className={styles.self}>
-              <TheView.Header icon={null}
-                              text={title}
-              />
-              <TheView.Body>
-                This is {{pascalcase name}}!
-              </TheView.Body>
-            </TheView>
-          </TheMeta>
+          <TheCycle {...{ onMount, onUnmount, }}>
+            <TheMeta title={title}>
+              <TheView className={styles.self}>
+                <TheView.Header icon={null}
+                                text={title}
+                />
+                <TheView.Body>
+                  This is {{pascalcase name}}!
+                </TheView.Body>
+              </TheView>
+            </TheMeta>
+          </TheCycle>
         )
       }
     )
