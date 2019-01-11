@@ -4,8 +4,9 @@
  */
 'use strict'
 
-const stateful = require('../lib/Stateful.js')
+const Stateful = require('../lib/Stateful.js')
 const assert = require('assert')
+const coz = require('coz')
 
 describe('stateful', function () {
   this.timeout(3000)
@@ -19,7 +20,11 @@ describe('stateful', function () {
   })
 
   it('Stateful', async () => {
-
+    const bud = Stateful({
+      name:'hoge/hoge',
+    })
+    bud.path = `${__dirname}/../tmp/testing-Stateful.js`
+    await coz.render(bud)
   })
 })
 
