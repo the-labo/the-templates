@@ -9,6 +9,6 @@ const {{requireAs}} = require('{{requirePath}}')
 
 module.exports = Object.freeze({
 {{#each mapping}}
-  '{{instanceName}}': {{../requireAs}}.{{className}},
+  {{instanceName}}: {{../requireAs}}.{{className}},
 {{/each}}
 })
