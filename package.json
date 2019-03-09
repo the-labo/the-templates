@@ -1,6 +1,6 @@
 {
   "name": "the-templates",
-  "version": "6.0.12",
+  "version": "6.0.13",
   "description": "Templates for the-projects",
   "main": "lib",
   "scripts": {
@@ -31,7 +31,8 @@
     "objnest": "^5.0.6",
     "reserved": "^0.1.2",
     "selfsigned": "^1.10.4",
-    "stringcase": "^4.3.1"
+    "stringcase": "^4.3.1",
+    "the-path-util": "^1.0.1"
   },
   "devDependencies": {
     "amocha": "^5.0.2",
